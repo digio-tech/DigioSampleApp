@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DigioSample</string>
+
+
+    <string-array name="service_modes">
+        <item>OTP</item>
+        <item>FP</item>
+        <item>IRIS</item>
+        <item>FACE</item>
+        <item>UPI</item>
+        <item>OKYC</item>
+        <item>KYC</item>
+        <item>MANDATE</item>
+        <item>E_KYC_SETU</item>
+    </string-array>
+
+    <string-array name="environment">
+        <item>PRODUCTION</item>
+        <item>DEVELOPMENT</item>
+        <item>SANDBOX</item>
+    </string-array>
+</resources>
