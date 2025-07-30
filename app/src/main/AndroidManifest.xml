@@ -30,6 +30,9 @@
         tools:replace="android:theme,android:allowBackup"
         tools:targetApi="31">
         <activity
+            android:name=".TestWebviewActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

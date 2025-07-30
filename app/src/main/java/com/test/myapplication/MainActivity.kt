@@ -1,5 +1,6 @@
 package com.test.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -30,14 +31,29 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
         setContentView(binding.root)
 
         // Set default values
-        binding.documentIdEdit.setText("KID250505132944334KUIS6CVAX2FXXX") // enter your Request ID
-        binding.emailMobileEdit.setText("abc@gamil.com") // identifier email/phone
-        binding.gwtEdit.setText("GWT250505132944375A1FLUGEI6R1XXS") // token optional
+        binding.documentIdEdit.setText("KID2507301227233148PYFQXI28UIJ1F") // enter your Request ID
+        binding.emailMobileEdit.setText("akash.kumar@digio.in") // identifier email/phone
+        binding.gwtEdit.setText("GWT2507301227233237M3ICI4X2QUXXS") // token optional
 
         binding.serviceModeEdit.setText(DigioServiceMode.OTP.toString())
         binding.envEdit.setText(DigioEnvironment.PRODUCTION.toString())
         setServiceModeDropDown()
         setEnvironmentDropDown()
+
+        binding.startWebview.setOnClickListener{
+            val documentId = binding.documentIdEdit.text?.toString().orEmpty().trim()
+            val emailMobile = binding.emailMobileEdit.text?.toString().orEmpty().trim()
+            val tokenId =  binding.gwtEdit.text.toString().trim()
+            var environment =  digioConfig.environment.name.trim()
+            val intent = Intent(this, TestWebviewActivity::class.java).apply {
+                putExtra("doc_id", documentId)
+                putExtra("identifier", emailMobile)
+                putExtra("token", tokenId)
+                putExtra("environment", environment)
+            }
+            startActivity(intent)
+
+        }
         binding.signNowBtm.setOnClickListener {
             val documentId = binding.documentIdEdit.text?.toString().orEmpty()
             val emailMobile = binding.emailMobileEdit.text?.toString().orEmpty()

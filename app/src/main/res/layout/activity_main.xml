@@ -49,6 +49,13 @@
             android:layout_margin="@dimen/medium"
             android:text="Proceed" />
 
+        <Button
+            android:id="@+id/start_webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium"
+            android:text="Webview Start" />
+
         <Spinner
             android:id="@+id/service_mode_spiner"
             android:layout_width="match_parent"
