@@ -31,9 +31,9 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
         setContentView(binding.root)
 
         // Set default values
-        binding.documentIdEdit.setText("KID2507301227233148PYFQXI28UIJ1F") // enter your Request ID
-        binding.emailMobileEdit.setText("akash.kumar@digio.in") // identifier email/phone
-        binding.gwtEdit.setText("GWT2507301227233237M3ICI4X2QUXXS") // token optional
+        binding.documentIdEdit.setText("KID2507301227233148PYFXXX8UIJ1F") // enter your Request ID
+        binding.emailMobileEdit.setText("abc@digio.in") // identifier email/phone
+        binding.gwtEdit.setText("GWT2507301227233237M3IXXXX2QUXXS") // token optional
 
         binding.serviceModeEdit.setText(DigioServiceMode.OTP.toString())
         binding.envEdit.setText(DigioEnvironment.PRODUCTION.toString())
