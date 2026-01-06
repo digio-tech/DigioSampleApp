@@ -29,6 +29,10 @@
         android:theme="@style/Theme.DigioSample"
         tools:replace="android:theme,android:allowBackup"
         tools:targetApi="31">
+<!--
+        android:theme="@style/Theme.DigioSample"
+
+-->
         <activity
             android:name=".TestWebviewActivity"
             android:exported="false" />

@@ -43,6 +43,7 @@ android {
 }
 
 dependencies {
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -62,16 +63,18 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // digio's
-    implementation(platform("com.github.digio-tech:digio-bom:v1.0.17"))
+    implementation(platform("com.github.digio-tech:digio-bom:v1.0.41"))
     implementation("com.github.digio-tech:gateway")
 
     implementation("androidx.appcompat:appcompat")
-    implementation("com.google.android.material:material")
+//    implementation("com.google.android.material:material")
+    implementation ("com.google.android.material:material:1.11.0")
+
     implementation("androidx.navigation:navigation-fragment-ktx")
     implementation("androidx.navigation:navigation-ui-ktx")
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout")
-    implementation("com.android.volley:volley")
+//    implementation("com.android.volley:volley")
     implementation("com.squareup.okhttp3:okhttp")
     implementation("com.squareup.okhttp3:logging-interceptor")
     implementation("com.google.code.gson:gson")
@@ -94,7 +97,7 @@ dependencies {
     implementation("com.github.digio-tech:image_processor")
     implementation("androidx.exifinterface:exifinterface")
 
-    implementation("com.github.digio-tech:sdk_ml_camera")
+//    implementation("com.github.digio-tech:sdk_ml_camera")
     implementation("com.google.mlkit:face-detection")
     implementation("androidx.camera:camera-core")
     implementation("androidx.camera:camera-camera2")
@@ -111,5 +114,13 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx")
     implementation("com.squareup.retrofit2:converter-gson")
+
+    implementation ("com.airbnb.android:lottie:6.6.6")
+    implementation("androidx.core:core-animation:1.0.0")
+//    implementation ("com.github.digio-tech:api_client:v5.0.1")
+//    implementation("io.coil-kt:coil:2.6.0")
+//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx")
+//    implementation("androidx.constraintlayout:constraintlayout")
+
 
 }

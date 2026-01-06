@@ -29,11 +29,11 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+//ENA250818185521930SJ2CS2MNBP9FAP
         // Set default values
-        binding.documentIdEdit.setText("KID2507301227233148PYFXXX8UIJ1F") // enter your Request ID
-        binding.emailMobileEdit.setText("abc@digio.in") // identifier email/phone
-        binding.gwtEdit.setText("GWT2507301227233237M3IXXXX2QUXXS") // token optional
+        binding.documentIdEdit.setText("DID26010612575936695V1S189XJ18ZU") // enter your Request ID
+        binding.emailMobileEdit.setText("akash.kumar@digio.in") // identifier email/phone
+        binding.gwtEdit.setText("GWT260105170017251CLGKYRDL4AHNZS") // token optional
 
         binding.serviceModeEdit.setText(DigioServiceMode.OTP.toString())
         binding.envEdit.setText(DigioEnvironment.PRODUCTION.toString())
