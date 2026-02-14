@@ -1,3 +1,5 @@
+import org.gradle.api.internal.provider.Providers.changing
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -11,7 +13,7 @@ android {
     defaultConfig {
         applicationId = "com.test.myapplication"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -63,7 +65,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // digio's
-    implementation(platform("com.github.digio-tech:digio-bom:v1.0.42"))
+    implementation(platform("com.github.digio-tech:digio-bom:v1.0.58"))
     implementation("com.github.digio-tech:gateway")
 
     implementation("androidx.appcompat:appcompat")
@@ -93,12 +95,15 @@ dependencies {
 
     implementation("com.github.digio-tech:esign_mandate")
 
-    implementation("com.github.digio-tech:sdk_native_camera")
+
     implementation("com.github.digio-tech:image_processor")
     implementation("androidx.exifinterface:exifinterface")
 
+    implementation("com.github.digio-tech:sdk_native_camera")
+
     implementation("com.github.digio-tech:sdk_ml_camera")
-    implementation("com.google.mlkit:face-detection")
+    implementation("com.google.android.gms:play-services-mlkit-face-detection")
+
     implementation("androidx.camera:camera-core")
     implementation("androidx.camera:camera-camera2")
     implementation("androidx.camera:camera-lifecycle")
@@ -117,10 +122,26 @@ dependencies {
 
     implementation ("com.airbnb.android:lottie:6.6.6")
     implementation("androidx.core:core-animation:1.0.0")
-//    implementation ("com.github.digio-tech:api_client:v5.0.1")
-//    implementation("io.coil-kt:coil:2.6.0")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx")
-//    implementation("androidx.constraintlayout:constraintlayout")
+    implementation ("com.github.digio-tech:api_client:v5.0.1")
+    implementation("io.coil-kt:coil:2.6.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx")
+    implementation("androidx.constraintlayout:constraintlayout")
 
+    // emudhra
+//    implementation("com.emudhra:esign:1.0.0-SNAPSHOT") {
+//        isChanging = true
+//    }
+//
+//    implementation("com.squareup.retrofit2:converter-simplexml:2.5.0") {
+//        exclude(group = "xmlpull", module = "xmlpull")
+//        exclude(group = "xpp3", module = "xpp3")
+//    }
+//
+//
+//    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.1"){
+//        exclude(group = "xpp3", module = "xpp3")
+//        exclude(group = "org.xmlpull", module = "xmlpull")
+//        exclude(group = "javax.xml.stream", module = "stax-api")
+//    }
 
 }

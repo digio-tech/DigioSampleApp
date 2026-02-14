@@ -8,7 +8,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-
 import com.test.myapplication.databinding.ActivityMainBinding
 import `in`.digio.sdk.gateway.Digio
 import `in`.digio.sdk.gateway.enums.DigioEnvironment
@@ -29,11 +28,11 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//ENA250818185521930SJ2CS2MNBP9FAP
+
         // Set default values
-        binding.documentIdEdit.setText("DID26010612575936695V1S189XJ18ZU") // enter your Request ID
-        binding.emailMobileEdit.setText("akash.kumar@digio.in") // identifier email/phone
-        binding.gwtEdit.setText("GWT260105170017251CLGKYRDL4AHNZS") // token optional
+        binding.documentIdEdit.setText("KID260215XXXXX5RNT9OVT6T51IR") // enter your Request ID
+        binding.emailMobileEdit.setText("ak@digio.in") // identifier email/phone
+        binding.gwtEdit.setText("GWT260215023624XXXX7EY4PEPLGS") // token optional
 
         binding.serviceModeEdit.setText(DigioServiceMode.OTP.toString())
         binding.envEdit.setText(DigioEnvironment.PRODUCTION.toString())
@@ -180,3 +179,4 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
         private const val TAG = "MainActivity"
     }
 }
+

@@ -20,7 +20,6 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
-
 -keepattributes SourceFile,LineNumberTable
 -keep public class * extends java.lang.Exception
 -keepclassmembers class * {
@@ -92,8 +91,27 @@
 -dontwarn org.bouncycastle.**
 -dontwarn org.openjsse.**
 -keep class * extends androidx.databinding.DataBinderMapper
+-dontwarn kotlin.jvm.internal.SourceDebugExtension
+
+-dontwarn org.xmlpull.v1.**
+-keep class org.xmlpull.v1.** { *; }
+-keep class in.digio.sdk.gateway.interfaces.FeatureRegistrationInterface$DefaultImpls { *; }
+
 -keep class javax.xml.bind.annotation.** { *; }
 -dontwarn javax.xml.bind.annotation.**
 -keep class com.ecs.cdslxsds.ESignProcessorResponse { *; }
--keep class javax.xml.bind.annotation.** { *; }
--dontwarn javax.xml.bind.annotation.**
+
+-dontwarn org.xmlpull.v1.XmlPullParser
+-dontwarn android.content.res.XmlResourceParser
+
+-keep class in.digio.sdk.gateway.interfaces.FeatureRegistrationInterface$DefaultImpls { *; }
+-dontwarn java.lang.invoke.StringConcatFactory
+-keep public class com.digio.two_way_sdk.** {
+    public *;
+}
+-keep class com.digio.two_way_sdk.** { *; }
+-keep class androidx.databinding.** { *; }
+-keep class androidx.viewbinding.** { *; }
+-keep public class * extends androidx.**
+-keep public class com.google.android.material.** { *; }
+-keep public class androidx.** { public *; }
