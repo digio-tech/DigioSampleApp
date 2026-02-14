@@ -98,9 +98,7 @@ dependencies {
 
     implementation("com.github.digio-tech:image_processor")
     implementation("androidx.exifinterface:exifinterface")
-
-    implementation("com.github.digio-tech:sdk_native_camera")
-
+    
     implementation("com.github.digio-tech:sdk_ml_camera")
     implementation("com.google.android.gms:play-services-mlkit-face-detection")
 

@@ -21,9 +21,6 @@ dependencyResolutionManagement {
             url = uri("https://jitpack.io")
 
         }
-        maven {
-            url = uri("https://pkgs.dev.azure.com/eMudhraTrustService/b81ae285-cb60-4000-8c39-394db16f2a75/_packaging/eMudhraEsignAAR/maven/v1")
-        }
     }
 }
 
