@@ -30,9 +30,9 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
         setContentView(binding.root)
 
         // Set default values
-        binding.documentIdEdit.setText("KID260215XXXXX5RNT9OVT6T51IR") // enter your Request ID
+        binding.documentIdEdit.setText("KID26XXXXX318W6GINSEMJWSB") // enter your Request ID
         binding.emailMobileEdit.setText("ak@digio.in") // identifier email/phone
-        binding.gwtEdit.setText("GWT260215023624XXXX7EY4PEPLGS") // token optional
+        binding.gwtEdit.setText("GWT2602180xxxxx71V5FARDFUR9153S") // token optional
 
         binding.serviceModeEdit.setText(DigioServiceMode.OTP.toString())
         binding.envEdit.setText(DigioEnvironment.PRODUCTION.toString())
@@ -82,8 +82,8 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
             // fontFormat = ""
         }
         digioConfig.theme = theme
-        digioConfig.faqButton = android.R.drawable.ic_menu_help
-        digioConfig.closeButton = android.R.drawable.ic_menu_close_clear_cancel
+//        digioConfig.faqButton = android.R.drawable.ic_menu_help
+//        digioConfig.closeButton = android.R.drawable.ic_menu_close_clear_cancel
         digioConfig.logo = "https://www.digio.in/images/digio_blue.png" // Your company logo URL
         digioConfig.linkApproach = false
 

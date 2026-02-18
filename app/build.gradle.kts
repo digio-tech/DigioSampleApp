@@ -65,7 +65,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // digio's
-    implementation(platform("com.github.digio-tech:digio-bom:v1.0.58"))
+    implementation(platform("com.github.digio-tech:digio-bom:v1.0.59"))
     implementation("com.github.digio-tech:gateway")
 
     implementation("androidx.appcompat:appcompat")
