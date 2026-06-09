@@ -138,6 +138,8 @@ class TestWebviewActivity : ComponentActivity() {
     ):WebView {
         webView = WebView(this).apply {
             setupWebViewClient()
+            isFocusable = true
+            isFocusableInTouchMode = true
             settings.apply {
                 javaScriptEnabled = true
                 domStorageEnabled = true

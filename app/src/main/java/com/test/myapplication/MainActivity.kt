@@ -8,6 +8,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import coil.size.ViewSizeResolver
 import com.test.myapplication.databinding.ActivityMainBinding
 import `in`.digio.sdk.gateway.Digio
 import `in`.digio.sdk.gateway.enums.DigioEnvironment
@@ -38,6 +39,11 @@ class MainActivity : ComponentActivity(), DigioSuccessFailureInterface {
         binding.envEdit.setText(DigioEnvironment.PRODUCTION.toString())
         setServiceModeDropDown()
         setEnvironmentDropDown()
+
+
+        binding.btnStateless.setOnClickListener {
+            startActivity(Intent(this, StatelessActivity::class.java))
+        }
 
         binding.startWebview.setOnClickListener{
             val documentId = binding.documentIdEdit.text?.toString().orEmpty().trim()

@@ -22,7 +22,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
 //        compose = true
@@ -70,7 +70,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx")
 //
 //
-    implementation(platform("com.github.digio-tech:digio-bom:v1.0.66"))
+    implementation(platform("com.github.digio-tech:digio-bom:v1.0.73"))
 //    implementation(platform("com.github.digio-tech:digio-bom:v1.0.40-beta-2"))
 //
     implementation("com.github.digio-tech:gateway")
@@ -161,8 +161,19 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx")
 //    implementation("com.github.amitshekhariitbhu.Fast-Android-Networking:android-networking")
     implementation("com.auth0:java-jwt:4.5.1") // to generate JWT token
-//    implementation('com.emudhra:esign:1.0.0-SNAPSHOT') {
-//        changing = true
-//    }
+
+
+    implementation("com.emudhra:esign:1.0.0-SNAPSHOT") {
+        isChanging = true
+    }
+
+    implementation("org.bouncycastle:bcprov-jdk16:1.45")
+
+    // Required by eMudhra at runtime; Jitpack esign_biometrics POM doesn't propagate it
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.15.1") {
+        exclude(group = "xpp3", module = "xpp3")
+        exclude(group = "org.xmlpull", module = "xmlpull")
+        exclude(group = "javax.xml.stream", module = "stax-api")
+    }
 
 }

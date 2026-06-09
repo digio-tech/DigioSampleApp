@@ -55,6 +55,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/medium"
             android:text="Webview Start" />
+        <Button
+            android:id="@+id/btn_stateless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium"
+            android:text="Stateless"/>
 
         <Spinner
             android:id="@+id/service_mode_spiner"

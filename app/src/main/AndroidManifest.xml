@@ -29,13 +29,15 @@
         android:theme="@style/SdkMaterialTheme"
         tools:replace="android:theme,android:allowBackup"
         tools:targetApi="31">
-<!--
-        android:theme="@style/Theme.DigioSample"
-
--->
+        <activity
+            android:name=".StatelessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DigioSample"/>
+        <!--         android:theme="@style/Theme.DigioSample" -->
         <activity
             android:name=".TestWebviewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -47,6 +49,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
